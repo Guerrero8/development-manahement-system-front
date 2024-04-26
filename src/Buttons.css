@@ -1,0 +1,14 @@
+/* Buttons.css */
+.buttons {
+    margin-top: 20px; /* Добавляем отступ над кнопками */
+    margin-bottom: 20px; /* Добавляем отступ внизу кнопок */
+    display: flex;
+}
+
+.buttons button {
+    margin-right: 10px; /* Добавляем отступ между кнопками */
+}
+.search-button {
+    margin-left: auto; /* Размещаем кнопку "Поиск" справа */
+    margin-right: 30px !important;/* Добавляем отступ справа для кнопки "Поиск" */
+}

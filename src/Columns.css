@@ -1,0 +1,14 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
