@@ -1,0 +1,46 @@
+/* CreateModalWindow.css */
+.modal {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.close-button:hover {
+    color: #555;
+}
+
+.modal-content button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
