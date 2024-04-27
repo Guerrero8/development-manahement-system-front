@@ -24,6 +24,9 @@ function OrderWindow({ onClose }) {
             clientId: clientId
         };
 
+        // Закрываем окно без ожидания ответа от сервера
+        onClose();
+
         // Отправляем POST-запрос на сервер
         fetch('http://localhost:8080/api/createOrder', {
             method: 'POST',
@@ -38,8 +41,6 @@ function OrderWindow({ onClose }) {
                 }
                 // Обработка успешного ответа от сервера
                 console.log('Заказ успешно создан');
-                // Закрываем текущее окно
-                onClose();
             })
             .catch(error => {
                 // Обработка ошибки

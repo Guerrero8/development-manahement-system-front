@@ -21,6 +21,9 @@ function CreateClientWindow({ onClose }) {
             clientInn: clientInn
         };
 
+        // Закрываем окно без ожидания ответа от сервера
+        onClose();
+
         fetch('http://localhost:8080/api/createClient', {
             method: 'POST',
             headers: {
@@ -33,7 +36,6 @@ function CreateClientWindow({ onClose }) {
                     throw new Error('Ошибка при создании клиента');
                 }
                 console.log('Клиент успешно создан');
-                onClose();
             })
             .catch(error => {
                 console.error('Ошибка:', error);
