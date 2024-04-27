@@ -1,0 +1,28 @@
+/* CreateOrderWindow.css */
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-details p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Выравнивание надписей и полей ввода по вертикали */
+}
+
+.order-details p:first-child input {
+    margin-left: 0; /* Убираем отступ у первого поля ввода */
+}
+
+.order-details p input {
+    margin-left: 50px; /* Добавляем отступы слева для всех остальных полей ввода */
+    flex: 1; /* Растягиваем поля ввода на всю доступную ширину */
+}
+
+.order-details p input[type="text"],
+.order-details p input[type="date"],
+.order-details p input[type="datetime-local"],
+.order-details p input[type="number"] {
+    flex: 1; /* Растягиваем поля ввода на всю доступную ширину */
+}

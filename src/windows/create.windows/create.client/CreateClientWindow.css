@@ -1,0 +1,42 @@
+/* CreateClientWindow.css */
+
+.create-client-window {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-client-window h2 {
+    margin-bottom: 20px;
+}
+
+.create-client-window form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-client-window .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.create-client-window .form-group:first-child input {
+    margin-left: 0;
+}
+
+.create-client-window .form-group input {
+    margin-left: 50px;
+    flex: 1;
+}
+
+.create-client-window .form-group input[type="text"],
+.create-client-window .form-group input[type="date"],
+.create-client-window .form-group input[type="tel"],
+.create-client-window .form-group input[type="email"],
+.create-client-window .form-group input[type="number"] {
+    flex: 1;
+}
+
+.create-client-window button[type="submit"] {
+    margin-top: 20px;
+}
