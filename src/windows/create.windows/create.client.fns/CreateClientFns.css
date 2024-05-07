@@ -1,0 +1,20 @@
+/* CreateClientFns.css */
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-details h2 {
+    margin-bottom: 20px;
+}
+
+.client-details input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.client-details button {
+    padding: 10px 20px;
+}

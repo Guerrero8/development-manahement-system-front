@@ -20,7 +20,6 @@ function Buttons() {
             <button onClick={openModal}>Добавить</button>
             {/* Условный рендеринг всплывающего окна */}
             {isModalOpen && <ModalWindow onClose={closeModal} />}
-            <button onClick={() => console.log('Удалить')}>Удалить</button>
             <button onClick={() => console.log('Обновить')}>Обновить</button>
             <button className="search-button" onClick={() => console.log('Создать')}>Поиск</button>
         </div>

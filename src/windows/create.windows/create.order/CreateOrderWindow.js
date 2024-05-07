@@ -19,12 +19,11 @@ function OrderWindow({ onClose }) {
             address: address,
             dateOfContractConclusion: contractDate,
             dateTimeOfInstallation: installationDate,
-            DeadlineForServiceProvision: serviceDeadline,
+            deadlineForServiceProvision: serviceDeadline,
             orderAmount: amount,
             clientId: clientId
         };
 
-        // Закрываем окно без ожидания ответа от сервера
         onClose();
 
         // Отправляем POST-запрос на сервер
