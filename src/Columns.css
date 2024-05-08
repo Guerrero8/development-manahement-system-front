@@ -12,3 +12,17 @@
     border: 1px solid #ccc;
     padding: 10px;
 }
+
+.spacer {
+    height: 20px; /* Выберите желаемую высоту отступа */
+}
+/* Обновленные стили для кнопок в файле Columns.css */
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container button {
+    margin-bottom: 5px; /* Добавляем отступ между кнопками */
+}
+
