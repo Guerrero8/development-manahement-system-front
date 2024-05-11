@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Columns from './Columns';
+import Columns from './tables.logic/Columns';
 import Buttons from './Buttons';
 
 function App() {
