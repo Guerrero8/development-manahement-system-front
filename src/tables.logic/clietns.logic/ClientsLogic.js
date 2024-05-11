@@ -50,3 +50,5 @@ export const viewOrder = (orderId) => {
     // Ваша логика просмотра заказа
     console.log(`Просмотр заказа с ID ${orderId}`);
 };
+
+

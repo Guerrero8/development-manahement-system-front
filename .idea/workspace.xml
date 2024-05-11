@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6e065c-1814-48fc-a4a3-24294a24c450" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tables.logic/clietns.logic/ClientsLogic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tables.logic/orders.logic/OrdersLogic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Columns.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/tables.logic/Columns.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Columns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tables.logic/Columns.js" afterDir="false" />
-    </list>
+    <list default="true" id="fb6e065c-1814-48fc-a4a3-24294a24c450" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,6 +41,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "consents",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.0\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,6 +85,7 @@
       <workItem from="1715344098815" duration="382000" />
       <workItem from="1715344494569" duration="7207000" />
       <workItem from="1715427220619" duration="2070000" />
+      <workItem from="1715453250815" duration="5376000" />
     </task>
     <servers />
   </component>
