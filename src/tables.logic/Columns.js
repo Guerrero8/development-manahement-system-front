@@ -56,18 +56,27 @@ function Modal({ isOpen, content, onClose }) {
     );
 }
 
-function Columns({ clients, orders }) {
+function Columns({ clients, clientFnsList, orders }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({});
-    const [clientFnsList, setClientFnsList] = useState([]); // Initialize clientFnsList here if needed
 
 
     const handleViewDetails = async (data, viewer) => {
         const details = await viewer(data);
-        console.log(details); // Добавьте это для проверки возвращаемых данных
-        setModalContent(details);
+        const clientFnsData = details.clientFnsList;  // Предполагаем, что данные ФНС находятся в свойстве fnsData
+        console.log("Данные ФНС:", clientFnsData);  // Для отладки
+
+        console.log("chet ", details); // Для отладки
+        setModalContent({
+            ...modalContent, // Копирование текущего состояния (если нужно сохранить предыдущие данные)
+            clients,          // Добавление или обновление данных о клиентах
+            clientFnsList: clientFnsList || [],  // Обновляем clientFnsList с новыми данными
+            orders,           // Добавление или обновление данных о заказах
+            ...details        // Обновление деталей, полученных из viewer
+        });
         setModalOpen(true);
     };
+
 
 
     const handleCloseModal = () => {
