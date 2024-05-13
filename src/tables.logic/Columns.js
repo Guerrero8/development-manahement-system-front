@@ -63,8 +63,7 @@ function Columns({ clients, clientFnsList, orders }) {
 
     const handleViewDetails = async (data, viewer) => {
         const details = await viewer(data);
-        const clientFnsData = details.clientFnsList;  // Предполагаем, что данные ФНС находятся в свойстве fnsData
-        console.log("Данные ФНС:", clientFnsData);  // Для отладки
+
 
         console.log("chet ", details); // Для отладки
         setModalContent({
