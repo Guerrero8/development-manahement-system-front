@@ -26,14 +26,18 @@ function Modal({ isOpen, content, onClose }) {
                 <h3>{title}</h3>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <tbody>
-                    {Object.keys(data[0]).map(key => (
-                        <tr key={key}>
-                            <td style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>
-                                <strong>{key}:</strong>
-                            </td>
-                            <td style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>
-                                {data[0][key] === null || data[0][key] === undefined ? 'Не указано' : data[0][key]}
-                            </td>
+                    {data.map((item, index) => (
+                        <tr key={index}>
+                            {Object.keys(item).map(key => (
+                                <React.Fragment key={key}>
+                                    <td style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>
+                                        <strong>{key}:</strong>
+                                    </td>
+                                    <td style={{ border: '1px solid #ddd', padding: '8px', textAlign: 'left' }}>
+                                        {item[key] === null || item[key] === undefined ? 'Не указано' : item[key]}
+                                    </td>
+                                </React.Fragment>
+                            ))}
                         </tr>
                     ))}
                     </tbody>
@@ -41,8 +45,6 @@ function Modal({ isOpen, content, onClose }) {
             </div>
         );
     }
-
-
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
@@ -60,23 +62,15 @@ function Columns({ clients, clientFnsList, orders }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({});
 
+    const handleViewDetails = async (id, viewer) => {
+        const details = await viewer(id);
 
-    const handleViewDetails = async (data, viewer) => {
-        const details = await viewer(data);
-
-
-        console.log("chet ", details); // Для отладки
-        setModalContent({
-            ...modalContent, // Копирование текущего состояния (если нужно сохранить предыдущие данные)
-            clients,          // Добавление или обновление данных о клиентах
-            clientFnsList: clientFnsList || [],  // Обновляем clientFnsList с новыми данными
-            orders,           // Добавление или обновление данных о заказах
-            ...details        // Обновление деталей, полученных из viewer
-        });
+        setModalContent(prevContent => ({
+            ...prevContent,
+            ...details
+        }));
         setModalOpen(true);
     };
-
-
 
     const handleCloseModal = () => {
         setModalOpen(false);
@@ -84,8 +78,7 @@ function Columns({ clients, clientFnsList, orders }) {
 
     return (
         <div className="Columns">
-            <Modal isOpen={modalOpen} content={{clients, clientFnsList, orders}} onClose={handleCloseModal} />
-
+            <Modal isOpen={modalOpen} content={modalContent} onClose={handleCloseModal} />
 
             <div className="row header">
                 <div className="cell">ID клиента</div>
@@ -135,7 +128,6 @@ function Columns({ clients, clientFnsList, orders }) {
                     <div className="cell">{order.deadlineForServiceProvision}</div>
                     <div className="cell">{order.orderAmount}</div>
                     <div className="cell">
-                        <button onClick={() => handleViewDetails(order.id, viewOrder)}>Посмотреть</button>
                         <button onClick={() => deleteOrderById(order.id)}>Удалить</button>
                     </div>
                 </div>
@@ -143,37 +135,5 @@ function Columns({ clients, clientFnsList, orders }) {
         </div>
     );
 }
-
-function clientInfo(client) {
-    if (!client) {
-        return <p>Информация о клиенте не доступна.</p>;
-    }
-    const keys = Object.keys(client);
-    const filledKeys = keys.filter(key => client[key] != null);
-    if (filledKeys.length === 0) {
-        return <p>Информация о клиенте не полностью заполнена.</p>;
-    }
-    return keys.map(key => (
-        <div key={key} className="info-row">
-            <strong>{key}: </strong>{formatValue(client[key])}
-        </div>
-    ));
-}
-
-function formatValue(value) {
-    return value === null || value === undefined ? 'Не указано' : value;
-}
-
-function renderContent(data) {
-    if (!data) {
-        return <p>Данные не доступны.</p>;
-    }
-    return Object.keys(data).map(key => (
-        <div key={key}>
-            <strong>{key}:</strong> {formatValue(data[key])}
-        </div>
-    ));
-}
-
 
 export default Columns;

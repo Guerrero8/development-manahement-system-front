@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6e065c-1814-48fc-a4a3-24294a24c450" name="Changes" comment="">
+    <list default="true" id="fb6e065c-1814-48fc-a4a3-24294a24c450" name="Changes" comment="работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tables.logic/Columns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tables.logic/Columns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tables.logic/clietns.logic/ClientsLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tables.logic/clietns.logic/ClientsLogic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tables.logic/orders.logic/OrdersLogic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tables.logic/orders.logic/OrdersLogic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +89,25 @@
       <workItem from="1715344098815" duration="382000" />
       <workItem from="1715344494569" duration="7207000" />
       <workItem from="1715427220619" duration="2070000" />
-      <workItem from="1715594448635" duration="1839000" />
+      <workItem from="1715594448635" duration="7732000" />
     </task>
+    <task id="LOCAL-00001" summary="работает">
+      <option name="closed" value="true" />
+      <created>1715601418412</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715601418412</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="работает" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

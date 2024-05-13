@@ -1,3 +1,4 @@
+// В файле OrdersLogic.js
 import axios from 'axios';
 
 // Функция для удаления заказа
@@ -11,19 +12,15 @@ export const deleteOrderById = async (orderId) => {
     }
 };
 
-// Функция для редактирования заказа
-export const editOrder = async (orderId, newData) => {
-    try {
-        // Выполняем PUT запрос к API
-        await axios.put(`http://localhost:8080/api/editOrderById?id=${orderId}`, newData);
-        console.log(`Заказ с ID ${orderId} успешно отредактирован`);
-    } catch (error) {
-        console.error(`Ошибка при редактировании заказа с ID ${orderId}:`, error);
-    }
-};
-
 // Функция для просмотра заказа
-export const viewOrder = (orderId) => {
-    // Ваша логика просмотра заказа
-    console.log(`Просмотр заказа с ID ${orderId}`);
+export const viewOrder = async (orderId) => {
+    try {
+        // Выполняем GET запрос к API, передавая orderId как параметр запроса
+        const response = await axios.get(`http://localhost:8080/api/getOrderById?id=${orderId}`);
+        // Возвращаем полученные данные
+        return response.data;
+    } catch (error) {
+        console.error(`Ошибка при получении данных заказа с ID ${orderId}:`, error);
+        return null; // Возвращаем null в случае ошибки
+    }
 };
